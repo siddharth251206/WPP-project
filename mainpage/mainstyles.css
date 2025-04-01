@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 15vh;
+    background-color: rgb(48, 160, 198);
+}
+
+#logo {
+    height: 100%;
+}
