@@ -15,8 +15,10 @@ body{
 }
 
 header {
-    height: 17vh;
+    height: 15vh;
     background-color: var(--themecolor);
+    text-align: center;
+    height: 200px;  
 }
 
 nav {
@@ -26,19 +28,24 @@ nav {
 ul {
     display: flex;
     list-style-type: none;
+    justify-content: space-between;
 }
 
 ul>li {
-    padding: 1%;
+    padding: 1% 10% 1% 10%;
     color: white;
     text-transform: uppercase;
 }
 
 ul>li:hover{
-    background-color: #000;
+    background-color: whitesmoke;
+    transform: translateX(1.2);
+    color: black;
     cursor: pointer;
 }
 
 #logo {
     height: 100%;
-}
+    width: 700px;
+    border: 10px white solid;
+}   
