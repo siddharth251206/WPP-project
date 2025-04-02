@@ -15,7 +15,7 @@ body{
 }
 
 header {
-    height: 17vh;
+    height: 15vh;
     background-color: var(--themecolor);
 }
 
@@ -29,7 +29,7 @@ ul {
 }
 
 ul>li {
-    padding: 1%;
+    padding: 0.5% 1%;
     color: white;
     text-transform: uppercase;
 }
