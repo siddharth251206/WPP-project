@@ -1,12 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+:root {
+    --themecolor: #343434;
+}
+
 header {
-    height: 15vh;
-    background-color: rgb(48, 160, 198);
+    height: 17vh;
+    background-color: var(--themecolor);
+}
+
+nav {
+    background-color: var(--themecolor);
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul>li {
+    padding: 1%;
+    color: white;
+    text-transform: uppercase;
 }
 
 #logo {
