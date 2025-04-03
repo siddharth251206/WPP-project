@@ -22,7 +22,6 @@ header {
 }
 
 .navbar{
-    /* padding: 10px; */
     display: flex;
     gap: 10px;
     color: white;
@@ -42,14 +41,47 @@ header {
     display: flex;
     gap: 20px;
     width: 100vw;
-    height: 50vh;
+    align-items: flex-start;
 }
-.card{
+.cards{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    gap: 5px;
     border-radius: 10px;
-    border: 2px solid black;
-    height: 300px;
+    box-shadow: 0 2px 8px 0;
     width: 200px;
+    background-color: #a47e7e8f;
+    align-items: stretch;
+}
+.title{
+    background-color: rgb(45, 159, 70);
+    color: white;
+    padding: 10px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+.title:hover{
+    background-color: rgb(173, 224, 189);
+    color: black;
+    cursor: pointer;
+}
+.details{
+    background-color: #cdcb91;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    line-height: 1.4;
+    clip-path: inset(0 0 100% 0); 
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out;}
+
+ .details.active{
+    display: block;
+    opacity: 1;
+    clip-path: inset(0 0 0 0);  }
+.rounded{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
