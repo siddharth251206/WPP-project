@@ -50,6 +50,27 @@ header {
     flex-grow: 1;
     border-radius: 10px;
     border: 2px solid black;
-    height: 300px;
+    height: 650px;
     width: 200px;
+    overflow: hidden;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-variant: small-caps;
+}
+.info{
+    margin: 10px;
+}
+.info>*{
+    margin: 2px 0;
+}
+
+.bizimg{
+    height: 35%;
+}
+.rating{
+    width: 25%;
+    background-color: greenyellow;
+    border-radius: 10px;
 }
