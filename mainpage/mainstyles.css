@@ -24,7 +24,6 @@ nav {
 }
 
 .navbar{
-    /* padding: 10px; */
     display: flex;
     list-style-type: none;
     justify-content: space-between;
@@ -59,77 +58,47 @@ ul>li:hover{
     display: flex;
     gap: 20px;
     width: 100vw;
-    flex-wrap: wrap;
+    align-items: flex-start;
 }
-.card{
+.cards{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    gap: 5px;
     border-radius: 10px;
-    border: 2px solid black;
-    width: 345px;
-    height: 670px;
-    overflow: hidden;
+    box-shadow: 0 2px 8px 0;
+    width: 200px;
+    background-color: #a47e7e8f;
+    align-items: stretch;
 }
-
-h3{
-    font-size: 1.5rem;
-    font-variant: small-caps;
-}
-.info{
-    margin: 10px;
-}
-.info>*{
-    margin: 2px 0;
-}
-
-.bizimg{
-    height: 35%;
-}
-.rating{
-    width: 25%;
-    background-color: greenyellow;
-    border-radius: 10px;
-}
-footer {
-    position: relative;
+.title{
+    background-color: rgb(45, 159, 70);
     color: white;
-     width: 100%;
-    height: 125px;
-    background-color: var(--themecolor);
     padding: 10px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
     text-align: center;
-    margin-top: auto; 
-} 
-
-
-footer .footer-links {
-    margin: 10px 0;
 }
-
-footer .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
+.title:hover{
+    background-color: rgb(173, 224, 189);
+    color: black;
+    cursor: pointer;
 }
+.details{
+    background-color: #cdcb91;
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    line-height: 1.4;
+    clip-path: inset(0 0 100% 0); 
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out;}
 
-footer .footer-links a:hover {
-    text-decoration: underline;
-}
-
-footer .social-media {
-    margin-top: 10px;
-}
-
-footer .social-media a {
-    color: #fff;
-    margin: 0 10px;
-}
-
-footer .social-media a:hover {
-    color: #ddd;
-}
-
-footer p {
-    margin-top: 10px;
+ .details.active{
+    display: block;
+    opacity: 1;
+    clip-path: inset(0 0 0 0);  }
+.rounded{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
