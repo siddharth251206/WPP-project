@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body{
     width: 100vw;
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -16,57 +15,36 @@ body {
 }
 
 header {
-    height: 15vh;
+    height: auto;
     background-color: var(--themecolor);
-    text-align: center;
-    height: 200px;
+    display: flex; 
+    flex-direction: column;
 }
 
-nav {
-    background-color: var(--themecolor);
-}
-
-ul {
+.navbar{
+    /* padding: 10px; */
     display: flex;
-    list-style-type: none;
-    justify-content: space-between;
-}
-
-ul>li {
-    padding: 1% 10% 1% 10%;
+    gap: 10px;
     color: white;
-    text-transform: uppercase;
 }
-
-ul>li:hover {
-    background-color: whitesmoke;
-    transform: translateX(1.2);
-    color: black;
-    cursor: pointer;
-}
-
 #logo {
-    height: 100%;
-    /* border: 10px white solid; */
+    height: 100px;
+    width: 258px;
 }
-
-.options {
+.options{
     padding: 10px;
 }
-
-.options:hover {
+.options:hover{
     background-color: rgb(0, 0, 0);
 }
-
-.topbuss {
+.topbuss{   
     padding: 20px;
     display: flex;
     gap: 20px;
     width: 100vw;
     flex-wrap: wrap;
 }
-
-.card {
+.card{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -77,24 +55,21 @@ ul>li:hover {
     overflow: hidden;
 }
 
-h3 {
+h3{
     font-size: 1.5rem;
     font-variant: small-caps;
 }
-
-.info {
+.info{
     margin: 10px;
 }
-
-.info>* {
+.info>*{
     margin: 2px 0;
 }
 
-.bizimg {
+.bizimg{
     height: 35%;
 }
-
-.rating {
+.rating{
     width: 25%;
     background-color: greenyellow;
     border-radius: 10px;
@@ -103,13 +78,13 @@ h3 {
 footer {
     position: relative;
     color: white;
-    width: 100%;
+     width: 100%;
     height: 125px;
     background-color: var(--themecolor);
     padding: 10px;
     text-align: center;
-    margin-top: auto;
-}
+    margin-top: auto; 
+} 
 
 
 footer .footer-links {
