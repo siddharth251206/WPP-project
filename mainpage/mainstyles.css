@@ -15,16 +15,17 @@ body{
 }
 
 header {
-    height: 17vh;
+    height: 15vh;
     background-color: var(--themecolor);
+    text-align: center;
+    height: 200px;  
 }
 
 nav {
     background-color: var(--themecolor);
 }
 
-.navbar{
-    /* padding: 10px; */
+ul {
     display: flex;
     list-style-type: none;
     justify-content: space-between;
@@ -33,13 +34,7 @@ nav {
 ul>li {
     padding: 1% 10% 1% 10%;
     color: white;
-}
-#logo {
-    height: 100px;
-    width: 258px;
-}
-.options{
-    padding: 10px;
+    text-transform: uppercase;
 }
 
 ul>li:hover{
