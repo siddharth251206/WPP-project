@@ -57,11 +57,21 @@ ul>li {
     text-transform: uppercase;
 }
 
-ul>li:hover {
+ul li:hover {
     background-color: whitesmoke;
     transform: translateX(1.2);
     color: black;
     cursor: pointer;
+}
+
+ul li a {
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color:black;
 }
 
 .i2 {
@@ -226,4 +236,94 @@ footer p {
 
 .margin-l {
     margin-left: 20px;
+}
+
+
+/* formpage css */
+ /* Form Container */
+ .form-section {
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 40px;
+    background: linear-gradient(to bottom right, #ffffff, #f2f6fa);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid #dcdcdc;
+}
+
+/* Section Title */
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1c2833;
+    font-size: 28px;
+    letter-spacing: 0.5px;
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Inputs & Textarea */
+form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #007acc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 122, 204, 0.25);
+}
+
+/* File input */
+form input[type="file"] {
+    background-color: #f8f9fa;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Submit Button */
+form button {
+    margin-top: 30px;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #007acc, #005fa3);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #005fa3, #004e8c);
+    transform: translateY(-2px);
+}
+
+/* Responsive Tweaks */
+@media screen and (max-width: 600px) {
+    .form-section {
+        padding: 30px 20px;
+    }
+
+    form button {
+        font-size: 15px;
+    }
 }
