@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     width: 100vw;
     font-family: 'Nunito Sans', sans-serif;
     overflow-x: hidden;
@@ -16,11 +17,30 @@ body{
 }
 
 header {
-    height: 15vh;
+    display: flex;
+    flex-direction: row;
     background-color: var(--themecolor);
-    text-align: center;
-    height: 200px;  
+    height: 200px;
+    justify-content: space-evenly;
 }
+
+.i1 h1 {
+    color: white;
+    font-size: 80px;
+}
+
+.i1 h2 {
+    color: #5CC2CE;
+    font-size: 45px;
+}
+
+.i1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 nav {
     background-color: var(--themecolor);
 }
@@ -37,7 +57,7 @@ ul>li {
     text-transform: uppercase;
 }
 
-ul>li:hover{
+ul>li:hover {
     background-color: whitesmoke;
     transform: translateX(1.2);
     color: black;
@@ -47,9 +67,9 @@ ul>li:hover{
 #logo {
     height: 100%;
     width: 700px;
-    border: 7px white solid;
-}   
-.topbuss{   
+}
+
+.topbuss {
     padding: 20px;
     display: flex;
     gap: 20px;
@@ -57,7 +77,8 @@ ul>li:hover{
     flex-wrap: wrap;
     align-items: flex-start;
 }
-.cards{
+
+.cards {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -67,13 +88,15 @@ ul>li:hover{
     box-shadow: 0 2px 8px 0;
     width: 305px;
     background: linear-gradient(to bottom right, #fff4e6, #ffffff);
-           align-items: stretch;
+    align-items: stretch;
 }
+
 .cards.active {
     position: relative;
     z-index: 11;
-    background-color: white; 
+    background-color: white;
 }
+
 .overlay {
     position: fixed;
     top: 0;
@@ -89,71 +112,79 @@ ul>li:hover{
 .overlay.active {
     display: block;
 }
-.title{
+
+.title {
     background-color: rgb(45, 159, 70);
     color: white;
     padding: 10px;
-    border-bottom-right-radius:10px ;
+    border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     font-size: 15px;
     text-align: center;
 }
-.title:hover{
+
+.title:hover {
     background-color: rgb(173, 224, 189);
     color: black;
     cursor: pointer;
 }
-h3{
+
+h3 {
     font-size: 1.5rem;
     font-variant: small-caps;
 }
+
 .details {
-    position: absolute; 
+    position: absolute;
     top: 100%;
     left: 0;
     z-index: 10;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    background: linear-gradient(135deg, #fde4cf 0%, #fff8f0 100%);  
+    background: linear-gradient(135deg, #fde4cf 0%, #fff8f0 100%);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-     padding: 10px;
+    padding: 10px;
     display: none;
     opacity: 0;
     line-height: 1.4;
-    clip-path: inset(0 0 100% 0); 
+    clip-path: inset(0 0 100% 0);
     transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out;
 }
 
 .details.active {
     display: block;
     opacity: 1;
-    clip-path: inset(0 0 0 0);  
+    clip-path: inset(0 0 0 0);
 }
-.cards.active .title{
+
+.cards.active .title {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.rounded{
+.rounded {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-.rating{
+
+.rating {
     width: 25%;
     background-color: greenyellow;
     border-radius: 10px;
 }
+
 footer {
     position: relative;
     color: white;
-     width: 100%;
+    width: 100%;
     height: 125px;
     background-color: var(--themecolor);
     padding: 10px;
     text-align: center;
-    margin-top: auto; 
-} 
-.img_height{
+    margin-top: auto;
+}
+
+.img_height {
     height: 238px;
 }
 
@@ -187,6 +218,7 @@ footer .social-media a:hover {
 footer p {
     margin-top: 10px;
 }
-.margin-l{
+
+.margin-l {
     margin-left: 20px;
 }
