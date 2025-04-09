@@ -41,6 +41,10 @@ header {
     text-align: center;
 }
 
+.i2 {
+    height: 100%;
+}
+
 nav {
     background-color: var(--themecolor);
 }
