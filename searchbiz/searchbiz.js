@@ -42,3 +42,18 @@ all_details.forEach(card => {
         });
     });
 });
+
+all_details.forEach(card =>{
+    const rating = card.querySelector(".rating").textContent
+    const ratingValue = parseFloat(rating.match(/(\d+(\.\d+)?)/)[0])
+    console.log(ratingValue)
+    if(ratingValue <= 2){
+        card.querySelector(".rating").style.backgroundColor = "red"
+    }
+    else if(ratingValue <= 3){
+        card.querySelector(".rating").style.backgroundColor = "yellow"
+    }
+    else{
+        card.querySelector(".rating").style.backgroundColor = "greenyellow"
+    }
+})
