@@ -3,22 +3,31 @@ const overlay = document.createElement("div");
 overlay.classList.add("overlay");
 document.body.appendChild(overlay);
 const allCards = document.querySelectorAll('.cards');
-// const businesses = [];
+let data=JSON.parse(localStorage.getItem('citybiz'))
 
-// allCards.forEach(card => {
-//   const name = card.querySelector('h3')?.textContent.trim();
-//   const email = card.querySelector('a[href^="mailto:"]')?.textContent.trim();
-//   const phone = card.querySelector('a[href^="tel:"]')?.textContent.trim();
-//   const image = card.querySelector('img')?.getAttribute('src');
-//   const description = card.querySelector('.details p')?.textContent.trim();
-//   const ratingText = card.querySelector('.rating')?.textContent.trim();
-//   const rating = ratingText ? parseFloat(ratingText.match(/[\d.]+/)?.[0]) : null;
-
-//   businesses.push({ name, email, phone, image, description, rating });
-// });
-
-// localStorage.setItem('citybiz', JSON.stringify(businesses));
-
+function renderBusinesses(data) {
+    const container = document.getElementById('topbuss');
+    container.innerHTML = '';
+  
+    data.forEach(biz => {
+      const card = document.createElement('div');
+      card.className = 'cards';
+      card.innerHTML = `
+        <img class="rounded img_height" src="${biz.image}" alt="${biz.name}">
+        <h3 class="margin-l">${biz.name}</h3>
+        <div class="rating margin-l">⭐ ${biz.rating} / 5</div>
+        <div class="title">View Details</div>
+        <div class="details">
+          <p>${biz.description}</p>
+          <h3 style="color:rgb(24, 24, 77)">Contact Details</h3>
+          <address>
+            📧 Email: <a href="mailto:${biz.email}">${biz.email}</a><br>
+            📞 Phone: ${biz.phone}
+          </address>
+        </div>
+      `;
+      container.appendChild(card);
+    });}
 all_details.forEach(card => {
     const title = card.querySelector(".title");
     const detail = card.querySelector(".details");
@@ -72,3 +81,6 @@ all_details.forEach(card =>{
         card.querySelector(".rating").style.backgroundColor = "greenyellow"
     }
 })
+document.addEventListener('DOMContentLoaded', () => {
+    renderBusinesses(data)
+  });
