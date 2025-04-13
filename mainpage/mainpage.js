@@ -1,27 +1,9 @@
-let businesses = [];
 let data=JSON.parse(localStorage.getItem('citybiz'))
+async function loadBusinessData() {
 
-// async function loadBusinessData() {
-//   if (data) {
-//     const res = await fetch('bus_details.json');
-//      businesses = await res.json();
-//     businesses.forEach((e)=>{
-//       data.push(e);
-//     })
-//     localStorage.setItem('citybiz', JSON.stringify(data));
-//     const sorted = [...businesses].sort((a, b) => b.rating - a.rating).slice(0,4);
-//     renderBusinesses(sorted);
-
-//   } else {
-//     const res = await fetch('bus_details.json');
-//     businesses = await res.json();
-//     localStorage.setItem('citybiz', JSON.stringify(businesses));
-
-//     const sorted = [...businesses].sort((a, b) => b.rating - a.rating).slice(0,4);
-//     renderBusinesses(sorted);
-//   }
-// }
-
+    const sorted = [...data].sort((a, b) => b.rating - a.rating).slice(0,4);
+    renderBusinesses(sorted);
+  } 
 function renderBusinesses(data = businesses) {
   const container = document.getElementById('topbuss');
   container.innerHTML = '';
@@ -49,7 +31,6 @@ function renderBusinesses(data = businesses) {
   attachDetailsClickEvents();
 }
 
-// 3️⃣ Show/hide card details on click
 function attachDetailsClickEvents() {
   const all_details = document.querySelectorAll(".cards");
   let overlay = document.querySelector(".overlay");
@@ -102,7 +83,6 @@ function attachDetailsClickEvents() {
   });
 }
 
-// 4️⃣ Auto-run on page load
 document.addEventListener('DOMContentLoaded', () => {
   loadBusinessData();
 });
