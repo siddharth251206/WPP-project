@@ -26,9 +26,37 @@
       </div>
     </header>
     <main>
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="Search businesses by name or category..." />
-          </div>
+       <section id="controls">
+            <label for="sortOrder">Sort by Rating:</label>
+            <select id="sortOrder">
+                <option value="none">None</option>
+                <option value="desc">High to Low</option>
+                <option value="asc">Low to High</option>
+            </select>
+
+            <label for="filtercat">Filter by Category:</label>
+            <select onchange="filterCardsByCategory(this.value)" id="filtercat">
+                <option value="All">All</option>
+                <option value="Tech & Gadgets">Tech & Gadgets</option>
+                <option value="Food & Drink">Food & Drink</option>
+                <option value="Retail">Retail</option>
+                <option value="Beauty and Wellness">Beauty and Wellness</option>
+                <option value="Services">Services</option>
+                <option value="Automotive">Automotive</option>
+            </select>
+
+            <label for="filterstar">Filter by Rating:</label>
+            <select onchange="handleRatingFilter(this.value)" id="filterstar">
+                <option value="all">All Ratings</option>
+                <option value="1-2">1 - 2</option>
+                <option value="2-3">2 - 3</option>
+                <option value="3-4">3 - 4</option>
+                <option value="4-5">4 - 5</option>
+            </select>
+
+            <input type="text" id="searchInput" placeholder="Search by name..." />
+            <button id="searchBtn">Search</button>
+        </section>
         <div class="topbuss" id="topbuss">
         </div>
     </main>
