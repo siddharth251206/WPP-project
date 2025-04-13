@@ -3,3 +3,167 @@ main>h2 {
     text-align: center;
     margin-top: 15px;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* bussiness css */
+.topbuss {
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    width: 99%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0;
+    width: 305px;
+    background: linear-gradient(to bottom right, #fff4e6, #ffffff);
+    align-items: stretch;
+}
+
+.cards.active {
+    position: relative;
+    z-index: 11;
+    background-color: white;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.title {
+    background-color: rgb(45, 159, 70);
+    color: white;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.title:hover {
+    background-color: rgb(173, 224, 189);
+    color: black;
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-variant: small-caps;
+}
+
+.details {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: linear-gradient(135deg, #fde4cf 0%, #fff8f0 100%);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    opacity: 0;
+    line-height: 1.4;
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s ease-in-out;
+}
+
+.details.active {
+    display: block;
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+}
+
+.cards.active .title {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.rounded {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.rating {
+    width: 25%;
+    background-color: greenyellow;
+    border-radius: 10px;
+}
+
+.img_height {
+    height: 238px;
+}
+
+
+
+
+/* reviews css */
+.review-container {
+    display: flex;
+    gap: 40px;
+    padding: 16px 3px;
+    justify-content: space-around;
+    width: 99%;
+}
+
+
+.review {
+    width: 250px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+}
+
+.review .user {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: black;
+}
+
+.review .stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.review .comment {
+    font-size: 14px;
+    line-height: 1.4;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
