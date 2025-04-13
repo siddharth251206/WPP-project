@@ -75,3 +75,59 @@ document.getElementById("sortOrder").addEventListener("change", function () {
     }
     sortedCards.forEach(card => container.appendChild(card));
 });
+
+document.getElementById("searchBtn").addEventListener("click", function () {
+    const searchValue = document.getElementById("searchInput").value.toLowerCase();
+    const cards = document.querySelectorAll(".cards");
+
+    cards.forEach(card => {
+        if (searchValue.trim() === "") {
+            cards.forEach(card => card.style.display = "");
+            return;
+        }
+        const name = card.querySelector("h3").textContent.toLowerCase();
+        if (name.includes(searchValue)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+
+function filterCardsByCategory(selectedCategory) {
+
+    originalCards.forEach(card => {
+        const categoryElement = card.querySelector('.category');
+        const category = categoryElement ? categoryElement.textContent.trim() : '';
+
+        if (selectedCategory === 'All' || category === selectedCategory) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+function handleRatingFilter(value) {
+    if (value === 'all') {
+      filterCardsByRating(0, 5); // show all
+    } else {
+      const [min, max] = value.split('-').map(parseFloat);
+      filterCardsByRating(min, max);
+    }
+}
+
+function filterCardsByRating(minRating, maxRating) {
+    originalCards.forEach(card => {
+      const ratingElement = card.querySelector('.rating');
+      const ratingText = ratingElement ? ratingElement.textContent.trim() : '';
+      const ratingMatch = ratingText.match(/([0-9.]+)\s*\/\s*5/);
+      const rating = ratingMatch ? parseFloat(ratingMatch[1]) : 0;
+
+      if (rating >= minRating && rating < maxRating) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }

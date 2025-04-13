@@ -20,6 +20,10 @@
     align-items: stretch;
 }
 
+.category {
+    display: none;
+}
+
 .img_height {
     height: 238px;
 }
