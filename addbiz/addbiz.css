@@ -5,13 +5,17 @@ h2{
 /* formpage css */
  /* Form Container */
  .form-section {
-    max-width: 650px;
+    width: 650px;
     margin: 60px auto;
     padding: 40px;
     background: linear-gradient(to bottom right, #ffffff, #f2f6fa);
     border-radius: 16px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     border: 1px solid #dcdcdc;
+}
+
+form{
+    width: 100%;
 }
 
 /* Section Title */
