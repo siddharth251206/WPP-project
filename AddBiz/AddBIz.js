@@ -20,7 +20,7 @@
          const file = formData.get('image');
 
         newBiz.image = await fileToBase64(file);
-         newBiz.rating = parseFloat(newBiz.rating);
+         newBiz.rating = 3.0;
          const existing = JSON.parse(localStorage.getItem('citybiz')) || [];
   existing.push(newBiz);
   localStorage.setItem('citybiz', JSON.stringify(existing));
