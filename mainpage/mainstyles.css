@@ -55,20 +55,22 @@ main {
 .topbuss{   
     padding: 20px;
     display: flex;
-    gap: 20px;
+    gap: 70px;
     width: 100vw;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
 }
 .heading{
     display: inline-block;
     text-align: center;
-    box-shadow: 0 2px 8px 0;
+    box-shadow: 0 2px 4px 0;
     padding: 20px;
     border-radius:10px ;
     margin-top: 20px;
     background: white;
-    font-variant: small-caps;
+    font-variant:small-caps;
+    color: black;
 }
 .cards{
     position: relative;
@@ -77,7 +79,7 @@ main {
     gap: 5px;
     border-radius: 10px;
     box-shadow: 0 2px 8px 0;
-    width: 49%;
+    width: 33%;
     background: linear-gradient(to bottom right, #fff4e6, #ffffff);
            align-items: stretch;
 }
@@ -152,7 +154,7 @@ h3{
     border-top-right-radius: 10px;
 }
 .rating{
-width: 12%;   
+width: 17%;   
  background-color: greenyellow;
     border-radius: 10px;
 }
@@ -178,12 +180,54 @@ width: 12%;
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    border: none;
 }
 .category-card:hover {
     background: linear-gradient(135deg, #d6f5e9, #ffffff);
     transform: translateY(-4px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
+  .review-container {
+    display: flex;
+    gap: 40px;
+    padding: 16px 3px;
+    justify-content: space-around;
+    width: 99%;
+}
+
+
+.review {
+    width: 250px;
+    box-shadow: 0 2px 4px 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    background: rgba(249, 249, 249, 0.9);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+.review .user {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: black;
+}
+
+.review .stars {
+    color: gold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.review .comment {
+    font-size: 14px;
+    line-height: 1.4;
+    color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 footer {
     background-color: #111;
     color: #fff;
@@ -203,7 +247,7 @@ footer {
     }
   }
 .img_height{
-    height: 420px;
+    height: 300px;
 }
 footer{
     position: relative;
