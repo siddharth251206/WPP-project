@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,8 @@
 <body>
     <div class="gradient-bg"></div>
     <header class="site-header">
-        <div class="header-container">
-        <img src="logo.png" alt="Logo" id="logo">
+        <div class="header-container">  
+        <img src="images and svgs/logo.png" alt="Logo" id="logo">
         <nav class="navbar">
           <ul class="options">
             <li id="current"><a href="../mainpage/mainpage.html">HOME</a></li>
@@ -29,17 +30,52 @@
             </div>
         </div>
         <section class="category-section">
+          <div class="gradient-bg"></div>
             <div  style="display: flex; justify-content: center;"><h2 class="category-heading heading">Browse by Category</h2></div>
             <div class="category-grid">
-              <div class="category-card">🍽️Food & ☕Drink</div>
-              <div class="category-card">🛍️ Retail</div>
-              <div class="category-card">🛠️ Services</div>
-              <div class="category-card">⚙️ Tech & Gadgets</div>
-              <div class="category-card">💅 Beauty & Wellness</div>
-              <div class="category-card">🚗 Automotive</div>
+              <button class="category-card" onclick="redirectWithCategory('Food & Drink')"><div> 🍽️Food & ☕Drink</div></button>
+              <button class="category-card" onclick="redirectWithCategory('Retail')"><div>🛍️ Retail</div></button>
+              <button class="category-card" onclick="redirectWithCategory('Services')"><div>🛠️ Services</div></button>
+              <button class="category-card" onclick="redirectWithCategory('Tech & Gadgets')"><div>⚙️ Tech & Gadgets</div></button>
+              <button class="category-card" onclick="redirectWithCategory('Beauty and Wellness')"><div>💅 Beauty & Wellness</div></button>
+              <button class="category-card" onclick="redirectWithCategory('Automotive')"><div>🚗 Automotive</div></button>
             </div>
           </section>                      
-        </div>
+         <div  style="display: flex; justify-content: center; margin-top: 30px;"><h2  class="category-heading heading">Customer Reviews</h2></div>
+        <section class="reviews">
+            <div class="review-container">
+                <div class="review">
+                    <p class="user">Shahrukh Khan</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="comment">The insights we gained from their team completely transformed our growth
+                        strategy. We’ve doubled our client base in just 6 months!</p>
+                </div>
+                <div class="review">
+                    <p class="user">Prabhas</p>
+                    <p class="stars">★★★★☆</p>
+                    <p class="comment">Great consulting services. They helped us streamline operations and identify
+                        untapped revenue channels. A bit pricey, but worth it</p>
+                </div>
+                <div class="review">
+                    <p class="user">Rudra P.</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="comment">Their digital marketing advice was spot-on. We’re seeing a huge increase in
+                        engagement and qualified leads.</p>
+                </div>
+                <div class="review">
+                    <p class="user">Priyanka Chopra</p>
+                    <p class="stars">★★★★☆</p>
+                    <p class="comment">Very professional and data-driven. Their strategic roadmap gave us clarity and
+                        direction for the next 2 years.</p>
+                </div>
+                <div class="review">
+                    <p class="user">Mukesh T.</p>
+                    <p class="stars">★★★★★</p>
+                    <p class="comment">From branding to market analysis, their support was end-to-end. We now have a
+                        clear vision and the tools to execute it</p>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer-links">
