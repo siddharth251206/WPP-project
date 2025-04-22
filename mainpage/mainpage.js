@@ -86,3 +86,7 @@ function attachDetailsClickEvents() {
 document.addEventListener('DOMContentLoaded', () => {
   loadBusinessData();
 });
+function redirectWithCategory(category) {
+  localStorage.setItem("selectedCategory", category);
+  window.location.href = "../Search Businesses/searchbiz.html";
+}
